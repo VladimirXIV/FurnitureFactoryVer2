@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="furniturefactory@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+    <root id="1"/>
+    <database id="2" parent="1" name="furniturefactory">
+      <ObjectId>33706</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12373</ObjectId>
+    </database>
+    <schema id="4" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <Current>1</Current>
+    </schema>
+    <schema id="5" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_temp_1">
+      <ObjectId>11816</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11817</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="information_schema">
+      <ObjectId>12081</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="factory">
+      <ObjectId>33707</ObjectId>
+      <IntrospectionTimestamp>2018-04-23.11:34:15.907</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1150</IntrospectionStateNumber>
+      <Visible>1</Visible>
+    </schema>
+    <sequence id="11" parent="10" name="content_seq">
+      <ObjectId>33716</ObjectId>
+      <StateNumber>1076</StateNumber>
+    </sequence>
+    <sequence id="12" parent="10" name="department_seq">
+      <ObjectId>33708</ObjectId>
+      <StateNumber>1068</StateNumber>
+    </sequence>
+    <sequence id="13" parent="10" name="employee_seq">
+      <ObjectId>33710</ObjectId>
+      <StateNumber>1070</StateNumber>
+    </sequence>
+    <sequence id="14" parent="10" name="furniture_seq">
+      <ObjectId>33712</ObjectId>
+      <StateNumber>1072</StateNumber>
+    </sequence>
+    <sequence id="15" parent="10" name="order_seq">
+      <ObjectId>33714</ObjectId>
+      <StateNumber>1074</StateNumber>
+    </sequence>
+    <table id="16" parent="10" name="content">
+      <ObjectId>33765</ObjectId>
+      <StateNumber>1086</StateNumber>
+    </table>
+    <table id="17" parent="10" name="department">
+      <ObjectId>33718</ObjectId>
+      <StateNumber>1081</StateNumber>
+    </table>
+    <table id="18" parent="10" name="employee">
+      <ObjectId>33726</ObjectId>
+      <StateNumber>1081</StateNumber>
+    </table>
+    <table id="19" parent="10" name="furniture">
+      <ObjectId>33757</ObjectId>
+      <StateNumber>1085</StateNumber>
+    </table>
+    <table id="20" parent="10" name="order">
+      <ObjectId>33739</ObjectId>
+      <StateNumber>1085</StateNumber>
+    </table>
+    <column id="21" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1085</StateNumber>
+    </column>
+    <column id="22" parent="16" name="order_id">
+      <Position>2</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1085</StateNumber>
+    </column>
+    <column id="23" parent="16" name="furniture_id">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1085</StateNumber>
+    </column>
+    <column id="24" parent="16" name="count">
+      <Position>4</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1085</StateNumber>
+    </column>
+    <index id="25" parent="16" name="pk_content">
+      <ObjectId>33768</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="16" name="pk_content">
+      <ObjectId>33769</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_content</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="27" parent="16" name="fk_order">
+      <ObjectId>33775</ObjectId>
+      <ColNames>order_id</ColNames>
+      <RefTableId>33739</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>order</RefTableName>
+      <RefKeyName>pk_order</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="28" parent="16" name="fk_furniture">
+      <ObjectId>33770</ObjectId>
+      <ColNames>furniture_id</ColNames>
+      <RefTableId>33757</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>furniture</RefTableName>
+      <RefKeyName>pk_furniture</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="29" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1077</StateNumber>
+    </column>
+    <column id="30" parent="17" name="name">
+      <Position>2</Position>
+      <DataType>varchar(2048)|0</DataType>
+      <StateNumber>1077</StateNumber>
+    </column>
+    <index id="31" parent="17" name="pk_department">
+      <ObjectId>33724</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="32" parent="17" name="pk_department">
+      <ObjectId>33725</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_department</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1079</StateNumber>
+    </column>
+    <column id="34" parent="18" name="firstname">
+      <Position>2</Position>
+      <DataType>varchar(2048)|0</DataType>
+      <StateNumber>1079</StateNumber>
+    </column>
+    <column id="35" parent="18" name="middlename">
+      <Position>3</Position>
+      <DataType>varchar(2048)|0</DataType>
+      <StateNumber>1079</StateNumber>
+    </column>
+    <column id="36" parent="18" name="lastname">
+      <Position>4</Position>
+      <DataType>varchar(2048)|0</DataType>
+      <StateNumber>1079</StateNumber>
+    </column>
+    <column id="37" parent="18" name="birthdate">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>1150</StateNumber>
+    </column>
+    <column id="38" parent="18" name="department_id">
+      <Position>6</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1079</StateNumber>
+    </column>
+    <index id="39" parent="18" name="pk_employee">
+      <ObjectId>33732</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="40" parent="18" name="pk_employee">
+      <ObjectId>33733</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_employee</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="41" parent="18" name="fk_department">
+      <ObjectId>33734</ObjectId>
+      <ColNames>department_id</ColNames>
+      <RefTableId>33718</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>department</RefTableName>
+      <RefKeyName>pk_department</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="42" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1083</StateNumber>
+    </column>
+    <column id="43" parent="19" name="name">
+      <Position>2</Position>
+      <DataType>varchar(2048)|0</DataType>
+      <StateNumber>1083</StateNumber>
+    </column>
+    <index id="44" parent="19" name="pk_furniture">
+      <ObjectId>33763</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="45" parent="19" name="pk_furniture">
+      <ObjectId>33764</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_furniture</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="46" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1081</StateNumber>
+    </column>
+    <column id="47" parent="20" name="name">
+      <Position>2</Position>
+      <DataType>varchar(2048)|0</DataType>
+      <StateNumber>1081</StateNumber>
+    </column>
+    <column id="48" parent="20" name="date">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>1081</StateNumber>
+    </column>
+    <column id="49" parent="20" name="finaldate">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <StateNumber>1081</StateNumber>
+    </column>
+    <column id="50" parent="20" name="isready">
+      <Position>5</Position>
+      <DataType>boolean|0</DataType>
+      <StateNumber>1081</StateNumber>
+    </column>
+    <column id="51" parent="20" name="employee_id">
+      <Position>6</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1081</StateNumber>
+    </column>
+    <column id="52" parent="20" name="department_id">
+      <Position>7</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1081</StateNumber>
+    </column>
+    <index id="53" parent="20" name="pk_order">
+      <ObjectId>33745</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="20" name="pk_order">
+      <ObjectId>33746</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>pk_order</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="55" parent="20" name="fk_employee">
+      <ObjectId>33752</ObjectId>
+      <ColNames>employee_id</ColNames>
+      <RefTableId>33726</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>employee</RefTableName>
+      <RefKeyName>pk_employee</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="56" parent="20" name="fk_department">
+      <ObjectId>33747</ObjectId>
+      <ColNames>department_id</ColNames>
+      <RefTableId>33718</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>department</RefTableName>
+      <RefKeyName>pk_department</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

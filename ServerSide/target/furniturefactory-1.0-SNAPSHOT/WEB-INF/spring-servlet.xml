@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <context:component-scan base-package="furniturefactory.controller, furniturefactory.serviceImpl, furniturefactory.service" />
+    <mvc:annotation-driven />
+    <mvc:cors>
+        <mvc:mapping path="/**" />
+    </mvc:cors>
+
+    <bean id="dprtmntSrv" class="furniturefactory.serviceImpl.DepartmentServiceImpl"></bean>
+    <bean id="ordrSrv"    class="furniturefactory.serviceImpl.OrderServiceImpl"></bean>
+    <bean id="emplSrv"    class="furniturefactory.serviceImpl.EmployeeServiceImpl"></bean>
+
+    <bean id="dprtmntDao" class="furniturefactory.dao.DepartmentDaoImpl" init-method="beanInit"></bean>
+    <bean id="ordrDao"    class="furniturefactory.dao.OrderDaoImpl" init-method="beanInit"></bean>
+    <bean id="emplDao"    class="furniturefactory.dao.EmployeeDaoImpl" init-method="beanInit"></bean>
+
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="classpath:database.properties"></property>
+    </bean>
+
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
+        <property name="persistenceUnitName" value="furnitureFactoryUnit"></property>
+        <property name="jpaProperties">
+            <props>
+                <prop key="hibernate.connection.driver_class">${db.driver-class-name}</prop>
+                <prop key="hibernate.connection.url">${db.url}</prop>
+                <prop key="hibernate.connection.username">${db.username}</prop>
+                <prop key="hibernate.connection.password">${db.password}</prop>
+                <prop key="hibernate.connection.pool_size">${db.pool-size}</prop>
+                <prop key="hibernate.dialect">${db.dialect}</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

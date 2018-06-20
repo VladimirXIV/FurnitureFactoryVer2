@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+	    <meta charset="utf-8"/>
+		<title>Simple Car Page</title>
+        <link rel="stylesheet" href="../css/styles.css"/>
+        <script src="../js/jquery-3.3.1.js"></script>
+        <script src="../js/scripts.js"></script>
+    </head>
+	
+	<body onload="startTime();">
+
+		<div id="header">
+            <div class="logo">
+                <img src="../img/customer-service-white-64.png">
+            </div>
+            <div class="name"><b>Furniture Factory</b> <i>Info Finder</i></div>
+            <div class="clearing"></div>
+        </div>
+
+		<div id="content">
+
+			<div class="nav-wrapper">
+				<div class="nav">
+                    <a href="#" onclick="getAllDepartments(); return false;">Departments<img src="../img/teamwork-black-16.png" align="right"></a>
+                    <a href="#" onclick="getAllEmployees(); return false;">Employee<img src="../img/engineer-black-16.png" align="right"></a>
+                    <a href="#">Furniture</a>
+                    <a href="#">Goods</a>
+                    <a href="#"onclick="getAllOrders(); return false;">Orders<img src="../img/shopping-cart-black-16.png" align="right"></a>
+                    <a href="aboutme.html">About us</a>
+                </div>
+			</div>
+
+            <div class="main-wrapper">
+
+                <div id="main" class="main">
+
+                    <div class="filter-pannel-wrapper">
+
+                    </div>
+
+                    <div class="button-pannel-wrapper">
+                        <button onclick="getAllDepartments()">Get from back</button>
+                    </div>
+
+                    <table>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="advrst-wrapper">
+                <div class="advrst"></div>
+            </div>
+
+            <!-- Grandfother's HACK to avoid troubles with 'float'-elements -->
+            <div class="clearing"></div>
+
+		</div>
+
+        <div id="footer"></div>
+
+	</body>
+
+</html>
