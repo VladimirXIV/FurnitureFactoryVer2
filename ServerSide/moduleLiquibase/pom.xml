@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>furniturefactory</artifactId>
+        <groupId>uncom.just.4.fun</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>moduleLiquibase</artifactId>
+
+    <dependencies>
+
+       <!-- <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-maven-plugin</artifactId>
+            <version>${liquibase.core-version}</version>
+        </dependency>-->
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>${liquibase.core-version}</version>
+                <configuration>
+                    <url>${db.connection.url}</url>
+                    <username>${db.user}</username>
+                    <password>${db.password}</password>
+                    <changeLogFile>${db.changelog.init}</changeLogFile>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="furniturefactory@localhost">
-  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.4">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.11">
     <root id="1"/>
     <database id="2" parent="1" name="furniturefactory">
       <ObjectId>33706</ObjectId>
@@ -77,23 +77,23 @@
     </table>
     <column id="21" parent="16" name="id">
       <Position>1</Position>
-      <DataType>bigint|0</DataType>
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1085</StateNumber>
     </column>
     <column id="22" parent="16" name="order_id">
       <Position>2</Position>
-      <DataType>bigint|0</DataType>
+      <DataType>bigint|0s</DataType>
       <StateNumber>1085</StateNumber>
     </column>
     <column id="23" parent="16" name="furniture_id">
       <Position>3</Position>
-      <DataType>bigint|0</DataType>
+      <DataType>bigint|0s</DataType>
       <StateNumber>1085</StateNumber>
     </column>
     <column id="24" parent="16" name="count">
       <Position>4</Position>
-      <DataType>bigint|0</DataType>
+      <DataType>bigint|0s</DataType>
       <StateNumber>1085</StateNumber>
     </column>
     <index id="25" parent="16" name="pk_content">
@@ -127,13 +127,13 @@
     </foreign-key>
     <column id="29" parent="17" name="id">
       <Position>1</Position>
-      <DataType>bigint|0</DataType>
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1077</StateNumber>
     </column>
     <column id="30" parent="17" name="name">
       <Position>2</Position>
-      <DataType>varchar(2048)|0</DataType>
+      <DataType>varchar(2048)|0s</DataType>
       <StateNumber>1077</StateNumber>
     </column>
     <index id="31" parent="17" name="pk_department">
@@ -149,33 +149,33 @@
     </key>
     <column id="33" parent="18" name="id">
       <Position>1</Position>
-      <DataType>bigint|0</DataType>
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1079</StateNumber>
     </column>
     <column id="34" parent="18" name="firstname">
       <Position>2</Position>
-      <DataType>varchar(2048)|0</DataType>
+      <DataType>varchar(2048)|0s</DataType>
       <StateNumber>1079</StateNumber>
     </column>
     <column id="35" parent="18" name="middlename">
       <Position>3</Position>
-      <DataType>varchar(2048)|0</DataType>
+      <DataType>varchar(2048)|0s</DataType>
       <StateNumber>1079</StateNumber>
     </column>
     <column id="36" parent="18" name="lastname">
       <Position>4</Position>
-      <DataType>varchar(2048)|0</DataType>
+      <DataType>varchar(2048)|0s</DataType>
       <StateNumber>1079</StateNumber>
     </column>
     <column id="37" parent="18" name="birthdate">
       <Position>5</Position>
-      <DataType>date|0</DataType>
+      <DataType>date|0s</DataType>
       <StateNumber>1150</StateNumber>
     </column>
     <column id="38" parent="18" name="department_id">
       <Position>6</Position>
-      <DataType>bigint|0</DataType>
+      <DataType>bigint|0s</DataType>
       <StateNumber>1079</StateNumber>
     </column>
     <index id="39" parent="18" name="pk_employee">
@@ -200,13 +200,13 @@
     </foreign-key>
     <column id="42" parent="19" name="id">
       <Position>1</Position>
-      <DataType>bigint|0</DataType>
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1083</StateNumber>
     </column>
     <column id="43" parent="19" name="name">
       <Position>2</Position>
-      <DataType>varchar(2048)|0</DataType>
+      <DataType>varchar(2048)|0s</DataType>
       <StateNumber>1083</StateNumber>
     </column>
     <index id="44" parent="19" name="pk_furniture">
@@ -222,38 +222,38 @@
     </key>
     <column id="46" parent="20" name="id">
       <Position>1</Position>
-      <DataType>bigint|0</DataType>
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1081</StateNumber>
     </column>
     <column id="47" parent="20" name="name">
       <Position>2</Position>
-      <DataType>varchar(2048)|0</DataType>
+      <DataType>varchar(2048)|0s</DataType>
       <StateNumber>1081</StateNumber>
     </column>
     <column id="48" parent="20" name="date">
       <Position>3</Position>
-      <DataType>date|0</DataType>
+      <DataType>date|0s</DataType>
       <StateNumber>1081</StateNumber>
     </column>
     <column id="49" parent="20" name="finaldate">
       <Position>4</Position>
-      <DataType>date|0</DataType>
+      <DataType>date|0s</DataType>
       <StateNumber>1081</StateNumber>
     </column>
     <column id="50" parent="20" name="isready">
       <Position>5</Position>
-      <DataType>boolean|0</DataType>
+      <DataType>boolean|0s</DataType>
       <StateNumber>1081</StateNumber>
     </column>
     <column id="51" parent="20" name="employee_id">
       <Position>6</Position>
-      <DataType>bigint|0</DataType>
+      <DataType>bigint|0s</DataType>
       <StateNumber>1081</StateNumber>
     </column>
     <column id="52" parent="20" name="department_id">
       <Position>7</Position>
-      <DataType>bigint|0</DataType>
+      <DataType>bigint|0s</DataType>
       <StateNumber>1081</StateNumber>
     </column>
     <index id="53" parent="20" name="pk_order">

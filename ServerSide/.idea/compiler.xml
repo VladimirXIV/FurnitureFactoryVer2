@@ -6,11 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="furniturefactory" />
+        <module name="moduleLiquibase" />
+        <module name="moduleService" />
+        <module name="simpleliquibase" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="furniturefactory" target="1.8" />
+      <module name="moduleLiquibase" target="1.8" />
+      <module name="moduleService" target="1.8" />
+      <module name="simpleliquibase" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

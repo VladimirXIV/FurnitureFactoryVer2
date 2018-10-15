@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/furniturefactory.iml" filepath="$PROJECT_DIR$/furniturefactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liquibase.iml" filepath="$PROJECT_DIR$/liquibase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduleLiquibase/moduleLiquibase.iml" filepath="$PROJECT_DIR$/moduleLiquibase/moduleLiquibase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduleService/moduleService.iml" filepath="$PROJECT_DIR$/moduleService/moduleService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simpleliquibase/simpleliquibase.iml" filepath="$PROJECT_DIR$/simpleliquibase/simpleliquibase.iml" />
     </modules>
   </component>
 </project>

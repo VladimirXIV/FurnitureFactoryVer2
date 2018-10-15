@@ -9,7 +9,16 @@
     <groupId>uncom.just.4.fun</groupId>
     <artifactId>furniturefactory</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
+
+    <properties>
+        <liquibase.core-version>3.6.2</liquibase.core-version>
+    </properties>
+
+    <modules>
+        <module>moduleLiquibase</module>
+        <module>moduleService</module>
+    </modules>
 
     <build>
         <plugins>
@@ -26,50 +35,80 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
-                    <outputDirectory>C:\Users\SBT-Fedotov-VM\wlp\usr\servers\MyHomeServer\dropins</outputDirectory>
+                    <outputDirectory>C:\Users\16713901\Projects\dropins</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
-    <dependencies>
+    <dependencyManagement>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>5.0.3.RELEASE</version>
-        </dependency>
+        <dependencies>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>5.0.3.RELEASE</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>5.0.3.RELEASE</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>5.2.6.Final</version>
-        </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>5.0.3.RELEASE</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.2.2</version>
-        </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>5.2.6.Final</version>
+            </dependency>
 
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.9.5</version>
-        </dependency>
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>42.2.2</version>
+            </dependency>
 
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>2.9.5</version>
-        </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.9.5</version>
+            </dependency>
 
-    </dependencies>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>2.9.5</version>
+            </dependency>
+
+            <!--<dependency>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>${liquibase.core-version}</version>
+                <scope>provided</scope>
+            </dependency>-->
+
+        </dependencies>
+
+    </dependencyManagement>
+
+    <profiles>
+
+        <profile>
+            <id>local-database</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <db.connection.url>jdbc:oracle:thin:@10.116.147.69:1521:drugov_aa</db.connection.url>
+                <db.user>okr</db.user>
+                <db.password>123456</db.password>
+                <db.changelog.init>C:\oki\config</db.changelog.init>
+                <db.changelog.script>C:\oki\config</db.changelog.script>
+            </properties>
+        </profile>
+
+
+    </profiles>
 
 </project>
